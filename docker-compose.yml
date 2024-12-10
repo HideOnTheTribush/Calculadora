@@ -1,0 +1,16 @@
+version: '3.8'
+
+services:
+  backend:
+    image: alex06qf2002/backend-calculadora  # Nombre de la imagen del backend en Docker Hub
+    container_name: calculadora-backend
+    ports:
+      - "3000:3000"  # Mapea el puerto 3000 del contenedor al puerto 3000 de tu máquina
+    restart: always
+
+  frontend:
+    image: alex06qf2002/frontend-calculadora  # Nombre de la imagen del frontend en Docker Hub
+    container_name: calculadora-frontend
+    ports:
+      - "80:80"  # Mapea el puerto 80 del contenedor al puerto 80 de tu máquina
+    restart: always
